@@ -1,0 +1,135 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark; /* Permite que el navegador elija el esquema de color */
+  color: rgba(255, 255, 255, 0.87); /* Color de texto claro */
+  background-color: #0f0f1d; /* Fondo azul muy oscuro para simular el espacio */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+  
+  background: 
+    radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%),
+    url(https://i.ibb.co/NC5X8cK/stars.png) repeat; 
+  
+}
+
+/* Estilos para el contenedor principal de la app */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #8c7ae6; /* Un color morado brillante para títulos */
+  text-shadow: 0 0 10px #8c7ae6, 0 0 20px #8c7ae6;
+}
+
+/* Estilos para los cuadros de la interfaz */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espacio entre los dos cuadros */
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Para que se adapten en pantallas pequeñas */
+}
+
+.card {
+  background-color: rgba(26, 26, 46, 0.7); /* Fondo semi-transparente oscuro */
+  border: 1px solid rgba(140, 122, 230, 0.5); /* Borde luminoso */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(140, 122, 230, 0.3), 0 0 30px rgba(140, 122, 230, 0.1); /* Sombra luminosa */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  text-align: left;
+  min-width: 300px;
+  max-width: 450px;
+  color: #e0e0e0; /* Color de texto claro */
+}
+
+.card h2 {
+  color: #a491d3; /* Color para subtítulos */
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #c9c9e8;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: calc(100% - 20px); /* Ajusta el ancho y considera el padding */
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #8c7ae6; /* Borde del input */
+  border-radius: 8px;
+  background-color: rgba(40, 40, 70, 0.9); /* Fondo oscuro del input */
+  color: #fff; /* Color de texto del input */
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #a491d3; /* Borde más claro al enfocar */
+  box-shadow: 0 0 8px rgba(164, 145, 211, 0.6);
+}
+
+button {
+  background-color: #8c7ae6; /* Color del botón */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a491d3; /* Color al pasar el mouse */
+  transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+
+.signo-info img {
+  max-width: 150px; /* Tamaño del icono del signo */
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 10px; /* Bordes suaves para la imagen */
+  box-shadow: 0 0 10px rgba(140, 122, 230, 0.4);
+}
+
+.signo-info p {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
